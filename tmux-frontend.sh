@@ -10,8 +10,8 @@ tmux rename-window -t $session:$window 'zsh'
 
 window=1
 tmux new-window -t $session:$window -n 'code'
-#setup nvim with tabs for coding
-#tmux send-keys -t $session:$window 'vim package.json'
+#start nvim 
+tmux send-keys -t $session:$window 'nvim .' Enter
 
 window=2
 tmux new-window -t $session:$window -n 'tests'
@@ -29,3 +29,6 @@ window=5
 tmux new-window -t $session:$window -n 'server'
 #ssh, integration, deployment
 #tmux send-keys -t $session:$window 'npm run serve'
+
+window=1
+tmux select-window -t $session:$window
