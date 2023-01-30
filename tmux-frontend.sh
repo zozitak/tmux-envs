@@ -20,6 +20,7 @@ tmux new-window -t $session:$window -n 'tests'
 window=3
 tmux new-window -t $session:$window -n 'git'
 #SCM tool
+tmux send-keys -t $session:$window 'git status' Enter
 
 window=4
 tmux new-window -t $session:$window -n 'docs'
