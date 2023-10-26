@@ -5,7 +5,7 @@ session="backend"
 tmux new-session -d -s $session
 
 window=0
-tmux rename-window -t $session:$window 'zsh'
+tmux rename-window -t $session:$window 'cl'
 #open in the root of work directory
 
 window=1
